@@ -14,7 +14,6 @@ from django.views.generic import (
 )
 
 
-
 @login_required
 def index(request):
     """View function for the home page of the site."""
@@ -38,8 +37,6 @@ def index(request):
 
 class ManufacturerListView(LoginRequiredMixin, ListView):
     model = Manufacturer
-    context_object_name = "manufacturer_list"
-    template_name = "taxi/manufacturer_list.html"
     paginate_by = 5
 
 
